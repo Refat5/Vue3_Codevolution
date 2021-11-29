@@ -3,6 +3,9 @@
 	<div v-text="age"></div>
 	<div v-html="varsity"> </div>
 	<div v-html="hack"></div>
+	<div v-bind:id="headingId"> Hello V-bind Heading Id </div>
+	<button v-bind:disabled="buttonDisable">Button</button>
+
 </template>
 
 <script>
@@ -15,6 +18,8 @@ export default {
 			age: "45",
 			varsity: "<strong>BUBT</strong>",
 			hack: `<a href="#" onclick="alert('your pc is hacked ! Please give me money i will save you')">Click Hear</a>`,
+			headingId: "heading",
+			buttonDisable: false,
 		};
 	},
 };
