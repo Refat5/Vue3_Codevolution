@@ -1,6 +1,8 @@
 <template>
 	<div>{{ greet }} {{ name }}</div>
 	<div v-text="age"></div>
+	<div v-html="varsity"> </div>
+	<div v-html="hack"></div>
 </template>
 
 <script>
@@ -11,6 +13,8 @@ export default {
 			name: "refat",
 			greet: "Hello",
 			age: "45",
+			varsity: "<strong>BUBT</strong>",
+			hack: `<a href="#" onclick="alert('your pc is hacked ! Please give me money i will save you')">Click Hear</a>`,
 		};
 	},
 };
