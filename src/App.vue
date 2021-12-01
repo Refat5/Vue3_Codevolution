@@ -21,6 +21,19 @@
           soldOut:isSoldOut
     }"> Object Conditional Class binding</h2>
 
+	<h3 v-bind:style="{
+        color:highlightColor,
+        fontSize:headerSize + 'px',
+        padding:'20px',
+    }">In line Style</h3>
+
+	<h2 v-bind:style="h2StyleObject">
+		Object Style
+	</h2>
+
+	<h3 v-bind:style="[baseStyleObject,successStyleObject]">Array Base Bind Style</h3>
+	<h3 v-bind:style="[baseStyleObject,dangerStyleObject]">Array Base Bind Style</h3>
+
 </template>
 
 <script>
@@ -38,6 +51,28 @@ export default {
 			status: "text-danger",
 			isPromoted: false,
 			isSoldOut: true,
+			highlightColor: "orange",
+			headerSize: 40,
+			h2StyleObject: {
+				color: "orange",
+				fontSize: "40px",
+				padding: "32px",
+			},
+
+			baseStyleObject: {
+				fontSize: "43px",
+				padding: "13px",
+			},
+			successStyleObject: {
+				color: "white",
+				backgroundColor: "green",
+				border: "1px solid white",
+			},
+			dangerStyleObject: {
+				color: "white",
+				backgroundColor: "red",
+				border: "2px solid white",
+			},
 		};
 	},
 };
