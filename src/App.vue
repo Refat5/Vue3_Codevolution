@@ -16,10 +16,10 @@
 
 	<h2 v-bind:class="[isPromoted && 'promoted', isSoldOut ? 'soldOut' : 'notSoldOut']"> Array Conditional Class binding</h2>
 
-	<h2 v-bind:class="{
+	<h2 :class="{
         promoted:isPromoted,
           soldOut:isSoldOut
-    }"> Object Conditional Class binding</h2>
+    }"> Object Conditional Class binding  V-bind short with just :sd</h2>
 
 	<h3 v-bind:style="{
         color:highlightColor,
