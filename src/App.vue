@@ -1,5 +1,5 @@
 <template>
-	<div>{{ greet }} {{ name }}</div>
+	<!-- <div>{{ greet }} {{ name }}</div>
 	<div v-text="age"></div>
 	<div v-html="varsity"> </div>
 	<div v-html="hack"></div>
@@ -32,7 +32,25 @@
 	</h2>
 
 	<h3 v-bind:style="[baseStyleObject,successStyleObject]">Array Base Bind Style</h3>
-	<h3 v-bind:style="[baseStyleObject,dangerStyleObject]">Array Base Bind Style</h3>
+	<h3 v-bind:style="[baseStyleObject,dangerStyleObject]">Array Base Bind Style</h3> -->
+
+	<h3 v-if="number === 0"> The Number is 07 </h3>
+	<h3 v-else-if="number < 0"> The Number is Negative </h3>
+
+	<h3 v-else-if="number > 0"> The Number is Positive </h3>
+	<h3 v-else> This is not a number </h3>
+
+	<div v-if="number == 'hello'">
+		<h4>HI</h4>
+		<h4>Refat</h4>
+		<h4>Whats Up</h4>
+	</div>
+
+	<template v-if="number == 'hello'">
+		<h4>HI</h4>
+		<h4>Refat</h4>
+		<h4>Whats Up</h4>
+	</template>
 
 </template>
 
@@ -41,6 +59,8 @@ export default {
 	name: "App",
 	data() {
 		return {
+			number: "hello",
+
 			name: "refat",
 			greet: "Hello",
 			age: "45",
